@@ -40,8 +40,8 @@ script:
  - ./mvnw clover:setup test -Plocal,test clover:aggregate clover:clover -e | grep -Fv 'DEBUG' | grep -Fv '[copy'
 
 after_success:
- - bash <(curl -s https://codecov.io/bash)
- - bash ./doc/scripts/deployGitPage.sh
+# - bash <(curl -s https://codecov.io/bash)
+# - bash ./doc/scripts/deployGitPage.sh
 
 dist:
  - trusty
